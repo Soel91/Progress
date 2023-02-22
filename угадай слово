@@ -1,0 +1,45 @@
+import random
+
+WORDS = ('кот', 'процессор', 'торт', 'байк', 'геймпад')
+
+word = random.choice(WORDS)
+# вывод количества букв в слове
+letters = len(word)
+print('Букв в данном слове:', letters)
+correct = input('\nВведите букву: ')
+tries = 5
+
+while word:
+    if word == 'кот':
+        if correct in word:
+            print('Есть такая буква!')
+        else:
+            print('Такой буквы нет')
+    if word == 'процессор':
+        if correct in word:
+            print('Есть такая буква!')
+        else:
+            print('Такой буквы нет')
+    if word == 'торт':
+        if correct in word:
+            print('Есть такая буква!')
+        else:
+            print('Такой буквы нет')
+    if word == 'байк':
+        if correct in word:
+            print('Есть такая буква!')
+        else:
+            print('Такой буквы нет')
+    if word == 'геймпад':
+        if correct in word:
+            print('Есть такая буква!')
+        else:
+            print('Такой буквы нет')
+    elif correct == word:
+        print('\nВы угадали слово!')
+        break
+    correct = input('\nОсталось {0} попыток. Введите букву: '.format(tries))
+    tries -= 1
+    if tries <= 0:
+        print('Попыток не осталось, Вы проиграли')
+        break
